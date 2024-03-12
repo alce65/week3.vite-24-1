@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header,
+footer {
+  color: bisque;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 1 0 auto;
+}
