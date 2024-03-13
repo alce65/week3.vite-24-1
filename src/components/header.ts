@@ -1,9 +1,10 @@
 import { Component } from './component';
 
 export class Header extends Component {
-  // eslint-disable-next-line no-useless-constructor
-  constructor(selector: string) {
+  title: string;
+  constructor(selector: string, title: string) {
     super(selector);
+    this.title = title;
     this.template = this.createTemplate();
     this.render();
   }
@@ -11,7 +12,7 @@ export class Header extends Component {
   createTemplate() {
     return `
     <header class="header">
-      <h1 class="header__title">Learning TS Components</h1>
+      <h1 class="header__title">${this.title}</h1>
     </header>
     `;
   }

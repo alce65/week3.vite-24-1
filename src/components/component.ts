@@ -1,4 +1,4 @@
-export class Component {
+export abstract class Component {
   selector: string;
   template: string = '';
   element!: HTMLElement;
@@ -14,6 +14,10 @@ export class Component {
     if (position === 'beforeend') {
       this.element = targetElement.lastElementChild! as HTMLElement;
     }
+  }
+
+  unRender() {
+    this.element.outerHTML = '';
   }
 }
 
