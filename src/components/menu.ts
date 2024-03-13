@@ -16,6 +16,10 @@ export class Menu extends Component {
         label: 'Home',
       },
       {
+        path: 'got-c.html',
+        label: 'GoT C',
+      },
+      {
         path: 'got.html',
         label: 'GoT',
       },
