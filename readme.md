@@ -108,5 +108,16 @@ export default {
 };
 ```
 
+### Testing Library
 
+```bash
 
+npm i -D jest-environment-jsdom
+npm i -D @testing-library/dom @testing-library/jest-dom testing-library/user-event
+```
+
+Añadimos en el fichero jest.config.js
+
+```js
+testEnvironment: 'jsdom',
+```
