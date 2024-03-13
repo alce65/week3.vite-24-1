@@ -1,7 +1,6 @@
 import { Component } from './component';
 
 export class Footer extends Component {
-  // eslint-disable-next-line no-useless-constructor
   constructor(selector: string) {
     super(selector);
     this.template = this.createTemplate();
