@@ -42,7 +42,7 @@ export class Add extends Component {
       <summary>
         <h2 class="add__title">Añadir mascota</h2>
       </summary>
-      <form class="add__form">
+      <form class="add__form" aria-label="form-add-pets">
         <div class="control_group">
           <label for="name">Nombre</label>
           <input type="text" id="name" name="name" required>
