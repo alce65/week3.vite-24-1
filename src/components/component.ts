@@ -13,7 +13,17 @@ export abstract class Component {
     targetElement.insertAdjacentHTML(position, this.template);
     if (position === 'beforeend') {
       this.element = targetElement.lastElementChild! as HTMLElement;
+    } else if (position === 'afterbegin') {
+      this.element = targetElement.firstElementChild! as HTMLElement;
+    } else if (position === 'beforebegin') {
+      this.element = targetElement.previousElementSibling! as HTMLElement;
+    } else if (position === 'afterend') {
+      this.element = targetElement.nextElementSibling! as HTMLElement;
     }
+  }
+
+  replace() {
+    this.element.outerHTML = this.template;
   }
 
   unRender() {

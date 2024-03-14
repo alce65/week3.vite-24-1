@@ -2,11 +2,23 @@ nav {
   ul {
     list-style: none;
     display: flex;
-    gap: 0.5rem;
   }
-
   a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    padding-inline: 1rem;
+    padding-block: 0.2rem;
+    background-color: rgb(169, 65, 65);
+    &:hover {
+      background-color: rgb(162, 17, 17);
+    }
+  }
+
+  li {
+    margin-inline: 0.2rem;
+    &:not(:first-child) {
+      border-left: 2px solid;
+    }
   }
 }

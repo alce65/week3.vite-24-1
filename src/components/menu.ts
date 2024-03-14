@@ -16,12 +16,16 @@ export class Menu extends Component {
         label: 'Home',
       },
       {
+        path: 'got.html',
+        label: 'GoT',
+      },
+      {
         path: 'got-c.html',
         label: 'GoT C',
       },
       {
-        path: 'got.html',
-        label: 'GoT',
+        path: 'pets.html',
+        label: 'Pets',
       },
       {
         path: 'vite.html',

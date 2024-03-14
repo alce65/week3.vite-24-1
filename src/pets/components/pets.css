@@ -1,0 +1,17 @@
+.pets__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 300px));
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+
+  @media (width > 1100px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li {
+    border: 1px solid brown;
+    background-color: bisque;
+    padding: 1rem;
+  }
+}
