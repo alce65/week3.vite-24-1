@@ -3,8 +3,8 @@ import { Component } from '../../components/component';
 import { Pet } from '../model/pet';
 
 export class Add extends Component {
-  add: (_pet: Pet) => void;
-  constructor(selector: string, add: (_pet: Pet) => void) {
+  add: (_pet: Omit<Pet, 'id'>) => void;
+  constructor(selector: string, add: (_pet: Omit<Pet, 'id'>) => void) {
     super(selector);
     this.add = add;
     this.template = this.createTemplate();
@@ -16,8 +16,7 @@ export class Add extends Component {
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData) as { [k: string]: string };
-    const newPet: Pet = {
-      id: crypto.randomUUID(),
+    const newPet: Omit<Pet, 'id'> = {
       name: data.name,
       breed: data.species,
       isAdopted: false,

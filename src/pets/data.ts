@@ -1,6 +1,6 @@
 import { Pet } from './model/pet';
 
-export const getPets = (): Pet[] => {
+export const getPetsLocal = async (): Promise<Pet[]> => {
   const PETS = [
     {
       id: crypto.randomUUID(),

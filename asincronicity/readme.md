@@ -19,3 +19,49 @@
 - Implica concurrencia
 - Ejemplo: Un sistema con múltiples núcleos de procesamiento
 - Ejemplo de la vida real: Un equipo de trabajo ruinoso
+
+## API Rest
+
+Protocolo de comunicación entre cliente y servidor: http(s)
+
+- Request: Petición del cliente
+  - Method: Verbo http: GET, POST, PATCH / PUT, DELETE, etc.
+  - URL: Dirección del recurso
+  - Headers: Metadatos de la petición
+  - Body: Datos de la petición
+  - Query: Parámetros de la petición
+  - Params: Parámetros de la petición
+- Response: Respuesta del servidor
+
+Ejemplo de petición:
+
+```http
+GET /users HTTP/1.1 
+Host: api.example.com
+```
+
+Ejemplo de respuesta:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe"
+    }
+  ]
+}
+```
+
+En un backend que implementa una API Rest, 
+se pueden implementar diferentes funciones para manejar diferentes peticiones:
+
+CRUD:
+
+Read -> GET,
+Create -> POST,
+Update -> PATCH / PUT,  
+Delete -> DELETE

@@ -1,18 +1,28 @@
 /* eslint-disable no-new */
 import './pets.css';
 import { Component } from '../../components/component';
-import { getPets } from '../data';
 import { Pet } from '../model/pet';
 import { Card } from './card';
 import { Add } from './add';
+import { RepoPets } from '../repo.api';
 
 export class Pets extends Component {
-  pets: Pet[];
+  pets: Pet[] = [];
+
+  repo: RepoPets;
+
   constructor(selector: string) {
     super(selector);
-    this.pets = getPets();
-
-    this.render();
+    this.repo = new RepoPets();
+    this.repo
+      .getAll()
+      .then((pets) => {
+        this.pets = pets;
+        this.render();
+      })
+      .catch((error) => {
+        console.log((error as Error).message);
+      });
   }
 
   render() {
@@ -43,27 +53,45 @@ export class Pets extends Component {
   }
 
   update(pet: Pet) {
-    this.pets = this.pets.map((p) => (p.id === pet.id ? pet : p));
-    console.log(this.pets);
-    localStorage.setItem('pets', JSON.stringify(this.pets));
+    this.repo
+      .update(pet)
+      .then((pet) => {
+        this.pets = this.pets.map((p) => (p.id === pet.id ? pet : p));
+        console.log(this.pets);
+      })
+      .catch((error) => {
+        console.log((error as Error).message);
+      });
   }
 
   delete(pet: Pet) {
-    this.pets = this.pets.filter((p) => p.id !== pet.id);
-    console.log(this.pets);
-    localStorage.setItem('pets', JSON.stringify(this.pets));
+    this.repo
+      .delete(pet)
+      .then((pet) => {
+        this.pets = this.pets.filter((p) => p.id !== pet.id);
+        console.log(this.pets);
+      })
+      .catch((error) => {
+        console.log((error as Error).message);
+      });
   }
 
-  add(pet: Pet) {
-    this.pets = [...this.pets, pet];
-    console.log(this.pets);
-    localStorage.setItem('pets', JSON.stringify(this.pets));
-    new Card(
-      '.pets__list',
-      pet,
-      'afterbegin',
-      this.update.bind(this),
-      this.delete.bind(this)
-    );
+  add(pet: Omit<Pet, 'id'>) {
+    this.repo
+      .add(pet)
+      .then((petWithId) => {
+        this.pets = [...this.pets, petWithId];
+        console.log(this.pets);
+        new Card(
+          '.pets__list',
+          petWithId,
+          'afterbegin',
+          this.update.bind(this),
+          this.delete.bind(this)
+        );
+      })
+      .catch((error) => {
+        console.log((error as Error).message);
+      });
   }
 }
