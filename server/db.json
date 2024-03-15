@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "5fe5",
+      "name": "Ernestina"
+    },
+    {
+      "id": "1011",
+      "name": "Ernestina"
+    }
+  ],
+  "pets": [
+    {
+      "id": "bba2eadd-8ca6-4c8a-b13d-762ecbaae4b5",
+      "name": "Buddy",
+      "breed": "Golden Retriever",
+      "image": "https://source.unsplash.com/random/300x300/?golden-retriever",
+      "isAdopted": true,
+      "adopter": "Pepe"
+    },
+    {
+      "id": "c80a5306-d543-492d-afe0-0866388f16bb",
+      "name": "Daisy",
+      "breed": "Beagle",
+      "image": "https://source.unsplash.com/random/300x300/?beagle",
+      "isAdopted": false,
+      "adopter": ""
+    },
+    {
+      "id": "89c7e535-00f1-4eb0-b1a0-80081986c892",
+      "name": "Lucy",
+      "breed": "Bulldog",
+      "image": "https://source.unsplash.com/random/300x300/?bulldog",
+      "isAdopted": false,
+      "adopter": ""
+    },
+    {
+      "id": "a2cd61bb-eb00-47dc-b4e5-89f0604289be",
+      "name": "Max",
+      "breed": "Labrador",
+      "image": "https://source.unsplash.com/random/300x300/?labrador",
+      "isAdopted": false,
+      "adopter": ""
+    },
+    {
+      "id": "19f12118-6c79-418c-95d5-1f93cb15a37c",
+      "name": "Sofía",
+      "breed": "Meagle",
+      "isAdopted": true,
+      "adopter": "Susana",
+      "image": "https://res.cloudinary.com/dip7gfqzk/image/upload/c_scale,c_fill,w_300,h_300/v1701271616/6f723c82-860a-4ae0-9498-531177ea081a-sofia.jpg"
+    }
+  ]
+}
