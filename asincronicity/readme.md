@@ -56,7 +56,7 @@ Content-Type: application/json
 }
 ```
 
-En un backend que implementa una API Rest, 
+En un backend que implementa una API Rest,
 se pueden implementar diferentes funciones para manejar diferentes peticiones:
 
 CRUD:

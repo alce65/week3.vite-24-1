@@ -15,7 +15,6 @@ Previamente instalados y configurados
 - [EsLint](https://eslint.org/)
 - [Jest](https://jestjs.io/)
 
-
 ## Configuración del entorno con VITE
 
 Instalación de VITE
@@ -90,7 +89,6 @@ Configuramos en el fichero eslint
     "jest": true
   },
 ```
-
 
 Configuramos en el fichero jest.config.js
 
