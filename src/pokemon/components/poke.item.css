@@ -1,0 +1,68 @@
+.poke-item {
+  border: 1px solid var(--color_background_secondary);
+  padding-left: 0.2rem;
+  position: relative;
+}
+.poke-item__link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--color_secondary);
+  display: flex;
+  flex-direction: column;
+
+  .poke-item__header {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .poke-item__data {
+    padding-inline: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.poke-item__link-label {
+  text-transform: capitalize;
+}
+
+.poke-item__link-sprite {
+  position: relative;
+}
+
+.poke-item__link-sprite-back {
+  position: absolute;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  z-index: 101;
+}
+
+.poke-item__link-sprite:hover .poke-item__link-sprite-front {
+  transform: rotateY(180deg);
+}
+
+.poke-item__link-sprite:hover .poke-item__link-sprite-back {
+  transform: rotateY(0deg);
+}
+
+.poke-item__link-sprite-front,
+.poke-item__link-sprite-back {
+  transition: 1s;
+}
+
+.poke-item__fav {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding-top: 0.2rem;
+  padding-right: 0.2rem;
+  cursor: pointer;
+}
+
+.poke-item__fav--favorite {
+  color: var(--color_favorite);
+}
