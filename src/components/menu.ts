@@ -31,6 +31,10 @@ export class Menu extends Component {
         path: 'vite.html',
         label: 'Vite Sample',
       },
+      {
+        path: 'pokemon.html',
+        label: 'Pokemons',
+      },
     ];
 
     return `

@@ -10,6 +10,7 @@ export default defineConfig({
         gotC: resolve(__dirname, 'got-c.html'),
         pet: resolve(__dirname, 'pet.html'),
         vite: resolve(__dirname, 'vite.html'),
+        poke: resolve(__dirname, 'pokemon.html'),
       },
     },
   },
