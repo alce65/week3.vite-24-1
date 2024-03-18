@@ -1,7 +1,14 @@
 import { screen } from '@testing-library/dom';
 import '@testing-library/jest-dom';
-import { MOCK_POKE } from '../../__mocks__/mock';
+// ALT  import { MOCK_POKE } from '../../__mocks__/mock';
 import { PokeItem } from './poke.item';
+import { Pokemon } from '../models/pokemon';
+
+const MOCK_POKE: Pokemon = {
+  id: 143,
+  name: 'snorlax',
+  url: 'https://pokeapi.co/api/v2/pokemon/143/',
+} as Pokemon;
 
 describe('Given "PokeItem" component', () => {
   document.body.innerHTML = `<slot></slot>`;
