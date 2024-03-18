@@ -27,7 +27,7 @@ export class PokeItem extends Component {
   private createTemplate() {
     return `
         <li class="poke-item">
-          <a class="poke-item__link" href='./detail.html?id=${
+          <a class="poke-item__link" href='./poke-details.html?id=${
             this.poke.id
           }&origin=${this.selector}'>
               <div class="poke-item__header">
