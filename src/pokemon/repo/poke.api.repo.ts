@@ -52,7 +52,8 @@ export class PokemonApiRepo {
 
   async getPokemonDetails(url: string): Promise<PokemonDetails> {
     const response = await fetch(url);
-    const data = (await response.json()) as PokemonDetails;
-    return data;
+    // Alt const data = (await response.json()) as PokemonDetails;
+    // return data;
+    return response.json();
   }
 }
